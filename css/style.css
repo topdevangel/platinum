@@ -1,0 +1,1379 @@
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #808080;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+   /*@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Rufina:wght@400;700&display=swap');*/
+   /*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');*/
+
+   body {
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+   }
+   p {
+    text-align: justify;
+   }
+   .container {
+    box-sizing: border-box;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+   }
+   #skip a {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    overflow:hidden;
+   }
+   #skip a:focus {
+    padding: 8px 32px;
+    font-size: 14px;
+    margin: 0;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #000;
+    background: #c6878f;
+    position: fixed;
+    z-index: 9000;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+   }
+   .logo img {
+    max-width: 120px;
+    align-self: center;
+   }
+   #school, .school {
+    color: #181818;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    text-transform: capitalize;
+   }
+   #school span,
+   .school span {
+    background: -webkit-linear-gradient(0deg, rgba(88,50,191,1) 0%, rgba(45,141,189,1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 65%;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: capitalize;
+   }
+   header {
+    background-color: #fff;
+    background-position: center center;
+    position: relative;
+   }
+   #header-contents {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+   }
+   #header-contents .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   a.logo {
+    display: flex;
+    gap: 15px;
+   }
+   a.logo,
+   a.logo #school,
+   a.logo .school {
+    align-items: center;
+    text-decoration: none;
+   }
+   a.logo,
+   a.logo:hover #school,
+   a.logo:hover .school {
+    text-decoration: none;
+   }
+   #header-contact-info {
+    position: relative;
+   }
+   #header-contact-info a {
+    background-color: rgb(255 255 255 / 60%);
+    color: #181818;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 3px;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+   }
+   #header-contact-info i {
+    color: #46d9ca;
+    color: rgb(70 217 202 / 50%);
+    font-size: 75px;
+    position: absolute;
+    right: -20px;
+    top: -12px;
+   }
+   #banner:before {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(68,206,199,1) 50%, rgba(64,95,174,1) 100%);;
+    content: "";
+    display: block;
+    height: 10px;
+    margin-left: 20%;
+    position: relative;
+    width: 80%;
+    z-index: 5;
+   }
+   #banner:after {
+    background: -webkit-linear-gradient(0deg, #5832bf, #2d8dbd);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgb(255,255,255);*/
+    background: linear-gradient(0deg, rgba(255,255,255,0) 15%, rgba(255,255,255,0.95) 85%);
+   }
+   #mobile-nav {
+    display: none;
+   }
+   #name {
+   }
+   footer {
+    background-color: #67697c;
+    color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+   }
+   footer .footer-cols {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+   }
+   footer .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+   }
+   footer .footer-right {
+   }
+   footer .school {
+    color: #fff;
+    font-size: 50px;
+   }
+   footer .logo img {
+    max-width: 120px;
+   }
+   footer ul.contact-links {
+    list-style: none;
+   }
+   footer ul.contact-links li {
+    align-items: center;
+    display: flex;
+    gap: 0 15px;
+    line-height: 2.2;
+   }
+   footer ul.contact-links li i {
+    font-size: 25px;
+   }
+   /*BANNER AREA*/
+   .splide__slide img {
+    display: block;
+    height: auto;
+    width: 100%;
+   }
+   #banner .splide__arrow:focus-visible {
+    outline: auto;
+   }
+   #banner .splide__pagination__page:focus-visible {
+    outline: auto;
+   }
+   h2 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+   }
+   h2 > span:first-child {
+    color: #5353b3;
+    display: block;
+    font-size: 20px;
+   }
+   img.fit {
+    display: block;
+    height: auto;
+    max-width: 100%;
+   }
+   h1,h2,h3,h4 {
+    color: #0d0a46;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.2;
+    margin-top: 0;
+   }
+   .row { display: flex; align-items: center; }
+   .col_10 { width: 10%; }
+   .col_20 { width: 20%; }
+   .col_30 { width: 30%; }
+   .col_40 { width: 40%; }
+   .col_50 { width: 50%; }
+   .col_60 { width: 60%; }
+   .col_70 { width: 70%; }
+   .col_80 { width: 80%; }
+   .col_90 { width: 90%; }
+   .content-block {
+    padding: 20px;
+   }
+   .content-block img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+   }
+   .content-block .dynamic-image {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 350px;
+    width: 100%;
+   }
+   .brilliant {
+    background-color: #ffa400;
+    border-radius: 50%;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .brilliant i {
+    font-size: 48px;
+    color: #000;
+   }
+   .brilliant span {
+    color: #000;
+    position: absolute;
+    bottom: 5px;
+    font-size: 14px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+   }
+   .brilliant:after {
+    box-shadow: 0px 0px 10px 0px #FF8533;
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 #ff8533;
+    -webkit-animation: witr_video_ripple 2s infinite;
+    animation: witr_video_ripple 2s infinite;
+   }
+   @-webkit-keyframes witr_video_ripple {
+     70% {
+       box-shadow: 0 0 0 75px rgba(255,255,255,0)
+     }
+     100% {
+       box-shadow: 0 0 0 0 rgba(255,255,255,0)
+     }
+   }
+   @keyframes witr_video_ripple {
+     70% {
+       box-shadow: 0 0 0 75px rgba(255,255,255,0)
+     }
+     100% {
+       box-shadow: 0 0 0 0 rgba(255,255,255,0)
+     }
+   }
+   /* ANNOUNCEMENTS */
+   #announcements {
+    background-color: #f6f6f8;
+    padding: 70px 0;
+   }
+   #announcements .content-block {
+    padding: 0;
+   }
+   /*QUICK LINKS*/
+   #qls {
+    background: url(../img/school-quicklinks-pattern.png) repeat top left;
+    padding: 70px 0;
+   }
+   #qls .container {
+    padding-left: 0;
+    padding-right: 0;
+   }
+   ul.quicklinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+   }
+   ul.quicklinks li {
+    display: block;
+    margin-bottom: 20px;
+    min-width: 240px;
+    /*width: 33%;*/
+   }
+   ul.quicklinks li a {
+    box-sizing: border-box;
+    color: #0d0a46;
+    display: inline-flex;
+    flex-direction: column-reverse;
+    font-size: 16px;
+    gap: 5px 0;
+    justify-content: center;
+    /*overflow: hidden;*/
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    transition: all 1s ease;
+
+    width: 238px;
+    height: 238px;
+    background: #f7f7f7;
+    border-radius: 12px;
+   }
+   ul.quicklinks li a:hover,
+   ul.quicklinks li a:focus {
+
+    transition: all .3s ease;
+   }
+   ul.quicklinks li a:hover i,
+   ul.quicklinks li a:focus i {
+    background: -webkit-linear-gradient(#0d0a46, #46dbcb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: all .3s ease;
+   }
+   ul.quicklinks li a i {
+    font-size: 38px;
+    margin: 10px 0;
+    background: -webkit-linear-gradient(#0d0a46, #0d0a46);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: all 1s ease;
+   }
+   ul.quicklinks li a:before {
+     background: transparent;
+     border: 4px solid transparent;
+     border-radius: 50%;
+     display: block;
+     content: "";
+     height: 100%;
+     position: absolute;
+     top: 50%;
+     transform: translate(-50%,-50%);
+     width: 100%;
+     left: 50%;
+
+     transition: all 1s ease;
+   }
+   ul.quicklinks li a i:after {
+
+   }
+
+   /* NEWS */
+   #news {
+    background-color: #fff;
+    padding: 50px 0;
+   }
+   /* QUOTE */
+   #quote {
+    align-items: center;
+    background: #000 url('../img/school-theme-featured-image.jpg') center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    min-height: 380px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+   }
+   #quote:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+   }
+   #quote h2 {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    position: relative;
+    text-shadow: 0px 3px 6px rgba(0,0,0,0.5);
+    z-index: 10;
+   }
+   /* NEWS */
+   .news-container {
+    display: flex;
+    gap: 0 20px;
+   }
+   .news-item {
+    color: #222;
+    flex: 1 1 auto;
+    position: relative;
+    text-decoration: none;
+   }
+   .news-item .news-preview {
+    background-color: #67697c;
+    display: block;
+    margin-bottom: 17px;
+    min-height: 250px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+   }
+   .news-item .news-preview:before {
+    /*background-color: #000;*/
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .5s;
+    transition: .8s;
+    z-index: 1;
+   }
+   .news-item .news-preview:hover:before,
+   .news-item .news-preview:focus:before {
+    opacity: 0.1;
+    webkit-transform: scale(1.2);
+    transform: scale(1.2);
+   }
+   .news-item .news-preview img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1.0);
+    transition: .5s all ease;
+   }
+   .news-item .news-preview:hover img {
+    /*transform: translate(-50%,-50%) scale(1.02);*/
+    transition: .5s all ease;
+   }
+   .news-date {
+    background-color: #f3f2f2;
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+   }
+   .news-item:hover .news-date,
+   .news-item:focus .news-date {
+    background-color: #ffa400;
+    color: #000;
+    transition: all .3s ease;
+   }
+   .news-item .news-date {
+    transition: all 1s ease;
+   }
+   .news-info {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+   }
+   .news-date .month {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1;
+   }
+   .news-date .day {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+   }
+   .news-title h3 {
+    font-size: 22px;
+    font-weight: 400;
+   }
+   .news-container .readmore {
+    background-color: rgb(255 255 255 / 30%);
+    color: #000;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 33px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+   }
+   .news-item:hover .readmore,
+   .news-item:focus .readmore {
+    background-color: rgb(0 0 0 / 30%);
+   }
+   .see_all {
+    text-align: left;
+   }
+   .see_all a {
+    color: #222;
+    display: inline-block;
+    margin: 30px 0;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 30px;
+    color: #67697c;
+    background-color: #f3f2f2;
+    text-decoration: none;
+   }
+   .see_all a:hover {
+    background-color: #c6878f;
+    color: #fff;
+   }
+   .see_all a::before {
+    background: transparent;
+    border: 4px solid transparent;
+    border-radius: 30px;
+    display: block;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    left: 50%;
+    transition: all 1s ease;
+   }
+   .see_all a:hover::before,
+   .see_all a:focus::before {
+    border: 4px solid #c6878f;
+    transform: translate(-50%,-50%) scale(1.1, 1.2);
+    transition: all .3s ease;
+}
+   /* WELCOME */
+   #welcome {
+    background-color: #f3f2f2;
+    padding: 50px 0;
+   }
+   /* EVENTS */
+   .events-container a {
+    color: #000;
+    text-decoration: none;
+   }
+   .events-container .event-monthday {
+    background-color: #f3f2f2;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 17px;
+   }
+   .events-container .events-item:hover .event-monthday {
+    background-color: #ffa400;
+    color: #000;
+    transition: all .3s ease;
+   }
+   .events-container .events-item .event-monthday {
+    transition: all 1s ease;
+   }
+   .events-container .event-month {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1;
+   }
+   .events-container .event-details {
+    display: flex;
+    flex-direction: column-reverse;
+   }
+   .events-container .event-day {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+   }
+   .events-container .events-item {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+    padding: 10px;
+   }
+   .events-container .event-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+   }
+
+   /* MAP */
+   .map-container iframe {
+    display: block;
+    width: 100% !important;
+   }
+
+   /* SOCIAL */
+   ul.social {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+   }
+   ul.social li a {
+    background-color: #ffffff44;
+    color: #fff;
+    border-radius: 50%;
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    transform: scale(1);
+    text-align: center;
+    text-decoration: none;
+    width: 36px;
+
+    transition: all .5s ease-in-out;
+   }
+   ul.social li a:hover,
+   ul.social li a:focus {
+   background-color: #fff;
+   color: #67697c;
+   transition: all .2s ease-in-out;
+   }
+   ul.social li a::before {
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: block;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    left: 50%;
+    transition: all 1s ease;
+   }
+   ul.social li a:hover::before,
+   ul.social li a:focus::before {
+    border: 2px solid #fff;
+    transform: translate(-50%,-50%) scale(1.2);
+    transition: all .3s ease;
+   }
+   ul.social li a i {
+    /*color: #fff;*/
+    font-size: 20px;
+    vertical-align: middle;
+   }
+   /* CLASES FOR HOVER EFFECTS */
+   .line {
+    position: relative;
+   }
+   .line:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    transform: scaleX(0);
+    box-shadow: 0 2px 0 #9fc2cc;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+   }
+   .line:hover:after,
+   .line:focus:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+   }
+   .hvr-outline-out {
+    position: relative;
+   }
+   .hvr-outline-out:before {
+    content: '';
+    position: absolute;
+    border: transparent solid 2px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.3s;
+    transition-property: border, top, right, bottom, left;
+   }
+   .hvr-outline-out:hover:before,
+   .hvr-outline-out:focus:before,
+   .hvr-outline-out:active:before {
+    border: #9fc2cc solid 2px;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+   }
+
+   .hvr-ripple-out {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+   }
+   .hvr-ripple-out:before {
+    content: '';
+    position: absolute;
+    border: #ef9122 solid 6px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+   }
+   .hvr-ripple-out:hover:before,
+   .hvr-ripple-out:focus:before,
+   .hvr-ripple-out:active:before {
+    animation-name: hvr-ripple-out;
+   }
+   @keyframes hvr-ripple-out {
+    100% {
+     top: -12px;
+     right: -12px;
+     bottom: -12px;
+     left: -12px;
+     opacity: 0;
+    }
+   }
+
+/* ==========================================================================
+   Subpage
+   ========================================================================== */
+.subpage header {
+  background-color: #67697c;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+.subpage .central-content h2 {
+ line-height: 1;
+ margin-top: 0;
+}
+.subpage-banner {
+ background-size: cover;
+ height: 30vw;
+ max-height: 350px;
+ background-position: center center;
+}
+#layout-basic {
+ display: flex;
+ gap: 0 20px;
+}
+#breadcrumb {
+ margin: 20px;
+}
+#breadcrumb i {
+  font-size: 24px;
+}
+#breadcrumb div {
+ display: inline-block;
+}
+#breadcrumb .separator::before {
+ content: " / ";
+ display: inline-block;
+ margin: 0 10px;
+}
+.side-content {
+ flex: 0 0 270px;
+}
+.central-content p {
+ flex: 1;
+ margin-top: 0;
+}
+
+
+/*news page*/
+.subpage-news-stories {
+  margin-top: 30px;
+}
+article.story {
+  display: flex;
+  gap: 20px;
+}
+article.story .story-preview {
+  background-size: cover;
+  background-position: center center;
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  flex: 0 0 50%;
+}
+article.story .story-content h3 {
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+.subpage-news-stories .separator {
+  content: "";
+  background-color: #ebebeb;
+  display: block;
+  height: 1px;
+  margin: 25px 15%;
+  width: 70%;
+}
+article.story .story-date {
+  color: #727272;
+  margin-bottom: 15px;
+}
+article.story .readmore {
+  text-align: right;
+}
+article.story .readmore a {
+  background-color: #ffa400;
+  border: 2px solid transparent;
+  color: #000000;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+article.story .readmore a:hover,
+article.story .readmore a:focus {
+  background-color: #ffffff;
+  border: 2px solid #ffa400;
+  color: #000000;
+}
+article.story .story-content {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.video-container {
+ position: relative;
+ padding-bottom: 56.25%;
+ height: 0;
+ overflow: hidden;
+ max-width: 100%;
+}
+.video-container iframe, .embed-container object, .embed-container embed {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}
+
+/* Calendar */
+.calendar-table {
+  border-left: 1px solid #ccc;
+  /*border-top: 1px solid #ccc;*/
+  margin-bottom: 30px;
+}
+.calendar-table tr td {
+ border-right: 1px solid #ccc;
+ border-bottom: 1px solid #ccc;
+ box-sizing: border-box;
+ height: 70px;
+ width: 14%;
+}
+.calendar-table .days-names {
+  background-color: #67697c;
+  color: #fff;
+}
+.calendar-table .days-names th {
+  padding: 10px 0;
+}
+.calendar-controls {
+  align-items: center;
+  background-color: #67697c;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 20px;
+}
+#cal-control-arrows {
+  display: inline-flex;
+}
+.calendar-month-year {
+  font-size: 30px;
+  font-weight: 700;
+}
+.calendar-month-year span {
+  display: inline-block;
+  min-width: 225px;
+}
+.calendar-view-type {
+  padding: 0;
+  position: relative;
+  width: 250px;
+}
+.calendar-view-type:hover ul {
+ display: block;
+}
+.calendar-view-type ul {
+ background-color: #c6878f;
+ color: #fff;
+ display: none;
+ left: 0;
+ list-style: none;
+ margin: 0;
+ padding: 10px;
+ position: absolute;
+ top: 100%;
+ z-index: 1;
+}
+.calendar-view-type ul li a {
+ color: #fff;
+ display: block;
+ min-width: 200px;
+ padding: 5px;
+ text-decoration: none;
+}
+.calendar-view-type ul li a:hover {
+  background-color: #fff;
+  color: #505050;
+}
+.calendar-current-view {}
+.calendar-table tr td {
+  position: relative;
+}
+.calendar_day_number {
+  color: #505050;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 30px;
+}
+.calendar_day_number.previous_month,
+.calendar_day_number.next_month {
+  color: #ccc;
+}
+.calendar_day_number:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+.calendar-table td.today {
+ background-color: #f3f2f2;
+}
+#cal-prev-month, #cal-next-month {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* Contact form */
+#contact-form {
+  box-sizing: border-box;
+  margin: 20px; /*0 auto;*/
+  padding: 20px 0;
+  width: 100%;
+}
+#contact-form input,
+#contact-form textarea {
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 12px;
+  width: 100%;
+  width: calc(100% - 24px);  
+}
+#contact-form input.incomplete,
+#contact-form textarea.incomplete {
+ border-color: red;
+}
+#contact-form input[type="submit"] {
+  background-color: #67697c;
+  color: white;
+}
+#contact-form input[type="submit"]:hover,
+#contact-form input[type="submit"]:focus {
+  background-color: #c6878f;
+  cursor: pointer;
+}
+#contact-form .special-field {
+ position: relative;
+}
+#contact-form .special-field input {
+  position: fixed;
+  top: -1000000px;
+  left: -1000000px;
+}
+#contact-form p.success {
+  display: none;
+}
+#contact-form.sent input,
+#contact-form.sent textarea {
+  display: none;
+}
+#contact-form.sent p.success {
+  display: block;
+  font-size: 20px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media screen and (max-width: 1300px) {
+  #school, .school {
+    font-size: 50px;
+  }
+  .logo img {
+    max-width: 140px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  ul.quicklinks li {
+    min-width: 150px;
+  }
+  ul.quicklinks li a {
+    font-size: 14px;
+    gap: 0;
+    height: 130px;
+    width: 130px;
+  }
+  ul.quicklinks li a i {
+    font-size: 30px;
+  }
+  .days-names th span:nth-child(2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  article.story {
+    flex-direction: column;
+  }
+  article.story .story-preview {
+    min-height: 300px;
+  }
+}
+@media screen and (max-width: 900px) {
+ #main-nav { display: none; }
+ #mobile-nav { display: block; }
+ #name {
+  left: 50%;
+  transform: translate(-50%,-50%);
+ }
+ .logo {
+  transform: scale(0.7);
+ }
+ footer .footer-cols {
+  flex-direction: column;
+  gap: 20px 0;
+ }
+ footer ul.contact-links li {
+  align-items: center;
+ }
+ .calendar-controls { 
+  flex-direction: column;
+  align-items: start;
+ }
+ #banner:not(.subpage #banner) {
+  background: #67697c url(../img/public-schools-themes-1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+ }
+ #banner .splide {
+  display: none;
+ }
+ .row {
+  flex-direction: column;
+ }
+ .col_10,.col_20,.col_30,.col_40,.col_50,.col_60,.col_70,.col_80,.col_90 {
+  width: 100%;
+ }
+}
+@media screen and (max-width: 740px) {
+  .news-container {
+    flex-direction: column;
+    gap: 30px 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  #school {
+    margin: 5px 0;
+  }
+  .logo img {
+    max-width: 130px;
+  }
+  ul.quicklinks li a {
+    height: 110px;
+    width: 110px;
+  }
+}
+@media screen and (max-width: 600px) {
+ #layout-basic {
+  flex-direction: column;
+ }
+ .side-content {
+  flex: auto;
+ }
+ #left-side-nav {
+  display: none;
+ }
+ #mobile-side-nav {
+  display: block;
+ }
+}
+@media screen and (max-width: 400px) {
+  footer .footer-left {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

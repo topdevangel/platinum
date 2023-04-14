@@ -1,0 +1,29 @@
+#left-side-nav {
+ background-color: #f3f2f2;
+ display: block;
+ margin-bottom: 20px;
+ padding: 20px;
+}
+#left-side-nav ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+#left-side-nav ul li {
+}
+#left-side-nav ul li a {
+ color: #222;
+ display: block;
+ padding: 5px 10px;
+ text-decoration: none;
+ text-transform: capitalize;
+}
+#left-side-nav ul li a:hover,
+#left-side-nav ul li a:focus {
+ background-color: #fff;
+ color: #000;
+}
+
+#left-side-nav ul ul {
+ margin-left: 20px;
+}

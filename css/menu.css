@@ -1,0 +1,170 @@
+#main-nav {
+  text-align: center;
+}
+#main-nav .container {
+  line-height: 0;
+}
+#main-nav ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+#main-nav ul:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#main-nav ul:hover,
+#main-nav ul:focus-within {
+  overflow: visible;
+}
+#main-nav li {
+  position: relative;
+  float: left;
+  /*background-color: #17B0FF;*/
+}
+#main-nav li:hover,
+#main-nav li:focus-within {
+  background-color: #ffa400;
+}
+#main-nav a {
+  display: block;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 10px 20px;
+  position: relative;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* second level */
+#main-nav ul ul {
+  display: block;
+  max-height: 0;
+  text-align: left;
+  transition: max-height 1s;
+}
+#main-nav ul li ul {
+  position: absolute;
+}
+#main-nav ul li:hover ul,
+#main-nav ul li:focus-within ul {
+  max-height: 999px;
+}
+#main-nav ul ul li {
+  float: none;
+  background-color: #ffa400;
+}
+#main-nav ul ul li:hover,
+#main-nav ul ul li:focus {
+  background-color: #f1f1f1; /*#1289C7;*/
+}
+#main-nav ul ul li a {
+  color: #000;
+  min-width: 160px;
+}
+#main-nav ul ul li:hover a,
+#main-nav ul ul li:focus-within a {
+  color: #000;
+}
+
+/* third level */
+#main-nav ul ul ul {
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 100%;
+  transition: width 0.5s;
+}
+#main-nav ul ul li:hover > ul,
+#main-nav ul ul li:focus-within > ul {
+  width: 100%;
+}
+#main-nav ul ul ul li {
+  background-color: #ffa400;
+}
+#main-nav ul ul ul li:hover,
+#main-nav ul ul ul li:focus-within {
+  background-color: #fff;
+}
+#main-nav ul ul ul li a,
+#main-nav ul ul li:hover ul li a,
+#main-nav ul ul li:focus-within ul li a {
+  color: #000;
+}
+
+/* Fourth level */
+#main-nav ul ul ul ul {
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 100%;
+  transition: width 0.5s;
+}
+#main-nav ul ul ul li:hover ul,
+#main-nav ul ul ul li:focus-within ul {
+  width: 100%;
+}
+#main-nav ul ul ul ul li {
+  background-color: #ffa400;
+}
+#main-nav ul ul ul ul li:hover,
+#main-nav ul ul ul ul li:focus {
+  background-color: #fff;
+}
+#main-nav ul ul ul ul li a,
+#main-nav ul ul ul li:hover ul li a,
+#main-nav ul ul ul li:focus-within ul li a {
+  color: #000;
+}
+
+
+
+/* sub list elements */
+
+#main-nav ul li.has-child > a {
+ padding-right: 30px;
+}
+#main-nav ul li.has-child > a:after {
+ font-family: IcoFont !important;
+ content: '\ea99';
+ font-size: 120%;
+ position: absolute;
+ font-size: 15px;
+ top: 50%;
+ transform: translateY(-50%);
+ right: 5px;
+}
+#main-nav ul ul li.has-child > a:after {
+ font-family: IcoFont !important;
+ content: '\eaa0';
+ font-size: 120%;
+ position: absolute;
+ font-size: 15px;
+ top: 50%;
+ transform: translateY(-50%);
+ right: 5px;
+}
+
+/*hover effect 1st level*/
+#main-nav .container > ul > li > a {
+ position: relative;
+ padding: 20px 24px;
+}
+/*
+#main-nav .container > ul > li > a:hover::before,
+#main-nav .container > ul > li:hover > a::before,
+#main-nav .container > ul > li > a:focus::before {
+ transform-origin: left;
+ transform: scaleX(1);
+}
+
+#main-nav .container > ul > li.current > a::before {
+ background-color: #ffa400;
+ transform-origin: left;
+ transform: scaleX(1);
+}
+*/
