@@ -86,7 +86,6 @@ textarea {
    /*@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');*/
 
    body {
-    /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 2;
@@ -129,10 +128,11 @@ textarea {
    #school, .school {
     color: #181818;
     font-family: 'Inter', sans-serif;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.1;
+    margin: 0;
     text-transform: capitalize;
    }
    #school span,
@@ -154,7 +154,7 @@ textarea {
    }
    #header-contents {
     position: absolute;
-    top: 10px;
+    top: 20px;
     width: 100%;
    }
    #header-contents .container {
@@ -227,10 +227,14 @@ textarea {
    #name {
    }
    footer {
-    background-color: #67697c;
-    color: #fff;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    background: #fff url(../img/school-singularity-footer-background.jpg) center top;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #181818;
+    font-size: 16px;
+   }
+   footer > .container {
+    padding: 70px 0;
    }
    footer .footer-cols {
     align-items: center;
@@ -245,9 +249,13 @@ textarea {
    footer .footer-right {
    }
    footer .school {
-    color: #fff;
-    font-size: 50px;
+    color: #181818;
+    font-size: 40px;
    }
+   footer h2.school > span {
+    font-size: 65%;
+    text-align: left;
+   } 
    footer .logo img {
     max-width: 120px;
    }
@@ -263,7 +271,19 @@ textarea {
    footer ul.contact-links li i {
     font-size: 25px;
    }
+   footer ul.contact-links li:nth-child(1) i{ color: #309ec1; }
+   footer ul.contact-links li:nth-child(2) i{ color: #3d61ad; }
+   footer ul.contact-links li:nth-child(3) i{ color: #5254b2; }
+   #footer-social {
+    background: rgb(89,50,191);
+    background: linear-gradient(90deg, rgba(89,50,191,0.8) 0%, rgba(42,128,185,0.6) 50%, rgba(70,219,203,0.8) 100%);
+    text-align: center;
+   }
    /*BANNER AREA*/
+   .splide {
+    max-height: 700px;
+    overflow: hidden;
+   }
    .splide__slide img {
     display: block;
     height: auto;
@@ -321,50 +341,6 @@ textarea {
     height: 350px;
     width: 100%;
    }
-   .brilliant {
-    background-color: #ffa400;
-    border-radius: 50%;
-    color: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-decoration: none;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   }
-   .brilliant i {
-    font-size: 48px;
-    color: #000;
-   }
-   .brilliant span {
-    color: #000;
-    position: absolute;
-    bottom: 5px;
-    font-size: 14px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-   }
-   .brilliant:after {
-    box-shadow: 0px 0px 10px 0px #FF8533;
-
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 100px;
-    width: 100px;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    border-radius: 50%;
-    box-shadow: 0 0 0 0 #ff8533;
-    -webkit-animation: witr_video_ripple 2s infinite;
-    animation: witr_video_ripple 2s infinite;
-   }
    @-webkit-keyframes witr_video_ripple {
      70% {
        box-shadow: 0 0 0 75px rgba(255,255,255,0)
@@ -392,6 +368,7 @@ textarea {
    /*QUICK LINKS*/
    #qls {
     background: url(../img/school-quicklinks-pattern.png) repeat top left;
+    background-attachment: fixed;
     padding: 70px 0;
    }
    #qls .container {
@@ -401,7 +378,7 @@ textarea {
    ul.quicklinks {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -410,15 +387,15 @@ textarea {
    }
    ul.quicklinks li {
     display: block;
-    margin-bottom: 20px;
-    min-width: 240px;
+    margin-bottom: 70px;
+    min-width: 360px;
     /*width: 33%;*/
    }
    ul.quicklinks li a {
     box-sizing: border-box;
     color: #0d0a46;
     display: inline-flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     font-size: 16px;
     gap: 5px 0;
     justify-content: center;
@@ -433,11 +410,15 @@ textarea {
     height: 238px;
     background: #f7f7f7;
     border-radius: 12px;
+
+    box-shadow: -15px -15px 20px rgba(255,255,255,.8), 15px 15px 20px rgba(57,65,124,.08);
    }
    ul.quicklinks li a:hover,
    ul.quicklinks li a:focus {
+    box-shadow: -2px -2px 5px rgba(255,255,255,.9), 2px 2px 4px rgba(57,65,124,.2);
+    transform: translateY(3px);
 
-    transition: all .3s ease;
+    transition: all .2s ease;
    }
    ul.quicklinks li a:hover i,
    ul.quicklinks li a:focus i {
@@ -474,52 +455,52 @@ textarea {
    ul.quicklinks li a i:after {
 
    }
+   ul.quicklinks li a .learnmore {
+    color: #5353b3;
+   }
+
+   /* NEWS */
+   #news h2 {
+    background: -webkit-linear-gradient(0deg, rgba(88,50,191,1) 0%, rgba(45,141,189,1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+   }
+   #news {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+   }
+   #news .news-container {
+    text-align: left;
+   }
 
    /* NEWS */
    #news {
-    background-color: #fff;
-    padding: 50px 0;
+    background-color: #eff4f9;
    }
-   /* QUOTE */
-   #quote {
-    align-items: center;
-    background: #000 url('../img/school-theme-featured-image.jpg') center center;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    min-height: 380px;
-    padding: 10px;
-    position: relative;
-    text-align: center;
-   }
-   #quote:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-   }
-   #quote h2 {
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-    font-size: 50px;
-    position: relative;
-    text-shadow: 0px 3px 6px rgba(0,0,0,0.5);
-    z-index: 10;
-   }
-   /* NEWS */
    .news-container {
     display: flex;
-    gap: 0 20px;
+    gap: 0 5%;
    }
    .news-item {
+    background-color: #fff;
+    box-shadow: -15px -15px 20px rgba(255,255,255,.8), 15px 15px 20px rgba(57,65,124,.08);
+    border-radius: 12px;
     color: #222;
-    flex: 1 1 auto;
+    flex: 1 1 33%;
+    overflow: hidden;
     position: relative;
     text-decoration: none;
+
+    transition: all .8s ease;
+   }
+   .news-item:hover,
+   .news-item:focus {
+    box-shadow: -2px -2px 5px rgba(255,255,255,.9), 2px 2px 4px rgba(57,65,124,.2);
+    transform: translateY(3px);
+
+    transition: all .2s ease;
    }
    .news-item .news-preview {
     background-color: #67697c;
@@ -561,148 +542,193 @@ textarea {
     /*transform: translate(-50%,-50%) scale(1.02);*/
     transition: .5s all ease;
    }
-   .news-date {
-    background-color: #f3f2f2;
-    display: flex;
-    flex-direction: column;
-    padding: 17px;
-   }
-   .news-item:hover .news-date,
-   .news-item:focus .news-date {
-    background-color: #ffa400;
-    color: #000;
-    transition: all .3s ease;
-   }
    .news-item .news-date {
-    transition: all 1s ease;
+    color: #747a96;
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-align: center;
    }
-   .news-info {
+   .news-item .news-date span {
+    display: inline-block;
+    margin-right: 0.3em;
+   }
+   .news-item .news-title {
+    min-height: 150px;
     display: flex;
     align-items: center;
-    gap: 0 30px;
+    padding: 0 20px;
    }
-   .news-date .month {
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 1;
-   }
-   .news-date .day {
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 1;
-   }
-   .news-title h3 {
+   .news-item .news-title h3 {
+    color: #0d0a46;
     font-size: 22px;
     font-weight: 400;
-   }
-   .news-container .readmore {
-    background-color: rgb(255 255 255 / 30%);
-    color: #000;
-    padding: 0;
-    text-decoration: none;
-    display: block;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
+    margin: 0;
     text-align: center;
-    font-size: 33px;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    right: 0;
    }
-   .news-item:hover .readmore,
-   .news-item:focus .readmore {
-    background-color: rgb(0 0 0 / 30%);
+   .news-item .readmore {
+    color: #5353b3;
+    font-size: 16px;
+    margin-bottom: 70px;
+    text-align: center;
+   }
+   #events .see_all a {
+    background: #fff;
+    color: #181818;
    }
    .see_all {
-    text-align: left;
+    text-align: center;
+    margin-top: 60px;
    }
    .see_all a {
-    color: #222;
-    display: inline-block;
-    margin: 30px 0;
-    display: inline-block;
-    padding: 10px 20px;
-    position: relative;
-    border-radius: 30px;
-    color: #67697c;
-    background-color: #f3f2f2;
-    text-decoration: none;
-   }
-   .see_all a:hover {
-    background-color: #c6878f;
+    border: 2px solid transparent;
+    border-radius: 26px;
+    background-color: #2c76d1;
+    box-shadow: 2px 2px 5px rgba(60,14,189,.3);
     color: #fff;
+    display: inline-block;
+    line-height: 52px;
+    font-size: 16px;
+    padding: 0 40px;
+    text-decoration: none;;
+
+    transition: all 0.2s ease;
    }
-   .see_all a::before {
-    background: transparent;
-    border: 4px solid transparent;
-    border-radius: 30px;
-    display: block;
-    content: "";
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 100%;
-    left: 50%;
-    transition: all 1s ease;
+   .see_all a:hover,
+   .see_all a:focus {
+    transform: translateY(3px);
+
+    transition: all 0.2s ease;
    }
-   .see_all a:hover::before,
-   .see_all a:focus::before {
-    border: 4px solid #c6878f;
-    transform: translate(-50%,-50%) scale(1.1, 1.2);
-    transition: all .3s ease;
-}
+   
    /* WELCOME */
    #welcome {
     background-color: #f3f2f2;
     padding: 50px 0;
    }
    /* EVENTS */
-   .events-container a {
-    color: #000;
-    text-decoration: none;
+   #events {
+    background: url(../img/school-singularity-featured-1.jpg) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 70px 0;
    }
-   .events-container .event-monthday {
-    background-color: #f3f2f2;
+   #events h2 {
+    color: #fff;
+    margin-bottom: 55px;
+   }
+   #events h2 > span:first-child {
+    color: #adc8e8;
+   }
+   .events-container {
     display: flex;
-    flex-direction: column-reverse;
-    padding: 17px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 40px;
    }
-   .events-container .events-item:hover .event-monthday {
-    background-color: #ffa400;
-    color: #000;
-    transition: all .3s ease;
-   }
-   .events-container .events-item .event-monthday {
-    transition: all 1s ease;
-   }
-   .events-container .event-month {
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 1;
-   }
-   .events-container .event-details {
-    display: flex;
-    flex-direction: column-reverse;
-   }
-   .events-container .event-day {
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 1;
-   }
-   .events-container .events-item {
-    display: flex;
-    align-items: center;
-    gap: 0 30px;
-    padding: 10px;
-   }
-   .events-container .event-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.5;
-   }
+   .events-item {
+      background-color: #fff;
+      box-shadow: 15px 15px 20px rgba(57,65,124,.5);
+      border-radius: 12px;
+      color: #747a96;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 238px;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      width: 238px;
+    }
+    .events-item > .event-day {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 17vw;
+      transform: translate(-50%, -50%);
+      opacity: 0; /*0.07;*/
+      font-weight: 800;
+      z-index: 1;
+
+      transition: all .2s ease-in;
+    }
+    /*
+    .events-item:nth-child(2n) {
+      margin-top: 60px;
+    }
+    */
+    .events-item .event-month-day-year {
+      font-size: 16px;
+      position: relative;
+      z-index: 2;
+    }
+    .events-item .event-month,
+    .events-item .event-day,
+    .events-item .event-year {
+      display: inline-block;
+    }
+    .events-item .event-length {
+      color: #5353b3;
+      font-size: 16px;
+      position: relative;
+      z-index: 3;
+    }
+    .events-item .event-title {
+      color: #0d0a46;
+      font-size: 22px;
+      position: relative;
+      z-index: 5;
+    }
+    .events-item .event-arrow {
+      background: #fff;
+      display: inline-block;
+      height: 45px;
+      width: 45px;
+      border-radius: 25px;
+      box-shadow: 3px 3px 6px rgb(57 65 124 / 19%);
+      /*line-height: 45px;*/
+      margin: 5px auto 0;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      z-index: 4;
+
+      transition: all .2s linear;
+    }
+    .events-item:hover .event-arrow,
+    .events-item:focus .event-arrow {
+      width: 150px;
+
+      transition: all .2s ease-in;
+    }
+    .events-item .event-more-text {
+      display: inline-block;
+      font-size: 14px;
+      right: 0;
+      overflow: hidden;
+      position: absolute;
+      width: 130px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      transition: all .2s ease-in;
+    }
+    .events-item .event-more-text i {
+      font-size: 30px;
+      margin-left: 15px;
+      vertical-align: middle;
+    }
+    .events-item:hover > .event-day,
+    .events-item:focus > .event-day {
+      font-size: 10vw;
+      opacity: 0.07;
+
+      transition: all .2s ease-in;
+    }
+    .events-item:hover .event-more-text {
+      
+    }
+  
 
    /* MAP */
    .map-container iframe {
@@ -712,13 +738,14 @@ textarea {
 
    /* SOCIAL */
    ul.social {
-    display: flex;
+    display: inline-flex;
     gap: 15px;
     list-style: none;
     padding: 0;
    }
    ul.social li a {
-    background-color: #ffffff44;
+    background-color: rgb(255 255 255 / 16%);
+    box-shadow: 7px 7px 14px rgba(57,65,124,0.3);
     color: #fff;
     border-radius: 50%;
     display: block;
@@ -733,29 +760,10 @@ textarea {
    }
    ul.social li a:hover,
    ul.social li a:focus {
-   background-color: #fff;
-   color: #67697c;
+    box-shadow: 2px 2px 6px rgba(57,65,124,0.3);
+    transform: translateY(3px);
+
    transition: all .2s ease-in-out;
-   }
-   ul.social li a::before {
-    background: transparent;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    display: block;
-    content: "";
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 100%;
-    left: 50%;
-    transition: all 1s ease;
-   }
-   ul.social li a:hover::before,
-   ul.social li a:focus::before {
-    border: 2px solid #fff;
-    transform: translate(-50%,-50%) scale(1.2);
-    transition: all .3s ease;
    }
    ul.social li a i {
     /*color: #fff;*/
@@ -1194,24 +1202,38 @@ article.story .story-content {
    ========================================================================== */
 @media screen and (max-width: 1300px) {
   #school, .school {
-    font-size: 50px;
   }
   .logo img {
-    max-width: 140px;
+
   }
 }
 @media screen and (max-width: 1024px) {
   ul.quicklinks li {
-    min-width: 150px;
+    min-width: 200px;
   }
   ul.quicklinks li a {
     font-size: 14px;
     gap: 0;
-    height: 130px;
-    width: 130px;
+    height: 170px;
+    width: 170px;
   }
   ul.quicklinks li a i {
     font-size: 30px;
+  }
+  .events-item {
+    height: 170px;
+    width: 170px;
+  }
+  .events-item .event-month-day-year {
+    font-size: 14px;
+  }
+  .events-item .event-length {
+    font-size: 14px;
+  }
+  .events-item .event-title {
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 600;
   }
   .days-names th span:nth-child(2) {
     display: none;
@@ -1228,9 +1250,9 @@ article.story .story-content {
 @media screen and (max-width: 900px) {
  #main-nav { display: none; }
  #mobile-nav { display: block; }
- #name {
-  left: 50%;
-  transform: translate(-50%,-50%);
+ #header-contents .container {
+  flex-direction: column;
+  gap: 25px 0;
  }
  .logo {
   transform: scale(0.7);
@@ -1247,10 +1269,13 @@ article.story .story-content {
   align-items: start;
  }
  #banner:not(.subpage #banner) {
-  background: #67697c url(../img/public-schools-themes-1.jpg);
+  background: #67697c url(../img/school-banner-theme-singularity-2.jpg);
   background-size: cover;
   width: 100%;
   height: 400px;
+ }
+ #banner:after {
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 70%);
  }
  #banner .splide {
   display: none;
@@ -1267,6 +1292,17 @@ article.story .story-content {
     flex-direction: column;
     gap: 30px 0;
   }
+  .news-item {
+    width: 100%;
+  }
+  .news-item .news-title {
+    display: block;
+    min-height: auto;
+    margin-bottom: 15px;
+  }
+  .news-item .readmore {
+    margin-bottom: 15px;
+  }
 }
 @media screen and (max-width: 700px) {
   #school {
@@ -1276,8 +1312,8 @@ article.story .story-content {
     max-width: 130px;
   }
   ul.quicklinks li a {
-    height: 110px;
-    width: 110px;
+    height: 150px;
+    width: 150px;
   }
 }
 @media screen and (max-width: 600px) {
