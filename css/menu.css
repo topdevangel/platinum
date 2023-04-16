@@ -25,15 +25,15 @@
   float: left;
   /*background-color: #17B0FF;*/
 }
-#main-nav li:hover,
-#main-nav li:focus-within {
-  background-color: #ffa400;
+#main-nav > ul > li:hover > a,
+#main-nav > ul > li:focus-within > a {
+  color: #642ec4;
 }
 #main-nav a {
   display: block;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.4;
-  padding: 10px 20px;
+  padding: 15px 35px;
   position: relative;
   color: #000;
   font-size: 18px;
@@ -52,23 +52,27 @@
 }
 #main-nav ul li:hover ul,
 #main-nav ul li:focus-within ul {
+  border-bottom: 2px solid #2c76d1;
   max-height: 999px;
+  z-index: 1;
 }
 #main-nav ul ul li {
   float: none;
-  background-color: #ffa400;
+  background-color: white;
 }
 #main-nav ul ul li:hover,
 #main-nav ul ul li:focus {
-  background-color: #f1f1f1; /*#1289C7;*/
+  background-color: white; /*#f1f1f1;*/ /*#1289C7;*/
 }
 #main-nav ul ul li a {
   color: #000;
   min-width: 160px;
+  font-size: 15px;
+  font-weight: 500;
 }
 #main-nav ul ul li:hover a,
 #main-nav ul ul li:focus-within a {
-  color: #000;
+  color: #2c76d1;
 }
 
 /* third level */
@@ -84,7 +88,7 @@
   width: 100%;
 }
 #main-nav ul ul ul li {
-  background-color: #ffa400;
+  background-color: white;
 }
 #main-nav ul ul ul li:hover,
 #main-nav ul ul ul li:focus-within {
@@ -94,6 +98,10 @@
 #main-nav ul ul li:hover ul li a,
 #main-nav ul ul li:focus-within ul li a {
   color: #000;
+}
+#main-nav ul ul li:hover ul li:hover a,
+#main-nav ul ul li ul li:focus a {
+ color: #2c76d1;
 }
 
 /* Fourth level */
@@ -109,19 +117,20 @@
   width: 100%;
 }
 #main-nav ul ul ul ul li {
-  background-color: #ffa400;
+  background-color: white;
 }
 #main-nav ul ul ul ul li:hover,
 #main-nav ul ul ul ul li:focus {
   background-color: #fff;
 }
-#main-nav ul ul ul ul li a,
-#main-nav ul ul ul li:hover ul li a,
-#main-nav ul ul ul li:focus-within ul li a {
+#main-nav ul ul li:hover ul li:hover ul li a,
+#main-nav ul ul li ul li:focus ul li a {
   color: #000;
 }
-
-
+#main-nav ul ul li:hover ul li:hover ul li:hover a,
+#main-nav ul ul li ul li:focus ul li a {
+  color: #2c76d1;
+}
 
 /* sub list elements */
 
@@ -150,21 +159,38 @@
 }
 
 /*hover effect 1st level*/
-#main-nav .container > ul > li > a {
- position: relative;
- padding: 20px 24px;
+#main-nav > ul > li > a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  /* border-radius: 4px; */
+  background-color: #642ec4;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
 }
-/*
-#main-nav .container > ul > li > a:hover::before,
-#main-nav .container > ul > li:hover > a::before,
-#main-nav .container > ul > li > a:focus::before {
+
+#main-nav > ul > li > a {
+ position: relative;
+ padding: 7px 0;
+}
+
+#main-nav > ul > li {
+  padding: 0 20px;
+}
+
+#main-nav > ul > li > a:hover::before,
+#main-nav > ul > li:hover > a::before,
+#main-nav > ul > li > a:focus::before {
  transform-origin: left;
  transform: scaleX(1);
 }
 
-#main-nav .container > ul > li.current > a::before {
- background-color: #ffa400;
+#main-nav > ul > li.current > a::before {
+ /*background-color: #ffa400;
  transform-origin: left;
- transform: scaleX(1);
+ transform: scaleX(1);*/
 }
-*/
