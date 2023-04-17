@@ -189,8 +189,3 @@
  transform: scaleX(1);
 }
 
-#main-nav > ul > li.current > a::before {
- /*background-color: #ffa400;
- transform-origin: left;
- transform: scaleX(1);*/
-}

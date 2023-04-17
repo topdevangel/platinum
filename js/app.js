@@ -368,3 +368,14 @@ jQuery(document).ready(function(){
         $(this).find('.event-day').first().clone().prependTo( $(this) );
     })
 })
+
+
+//events animation
+jQuery(document).ready(function(){
+    $('.events-item').hover(function(){
+        $(this).children('.event-day').addClass('hovered')
+    },
+    function(){
+        $(this).children('.event-day').removeClass('hovered')
+    })
+})
