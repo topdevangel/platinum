@@ -1,7 +1,7 @@
 #mobile-side-nav {
  display: none;
 
- background-color: #4e4e4e;
+ background-color: #2c76d1;
  color: #fff;
  margin-bottom: 20px;
 }
@@ -19,6 +19,10 @@
 }
 .mobile-side-title i {
  padding: 10px;
+ width: 30px;
+ height: 30px;
+ line-height: 30px;
+ text-align: center;
 }
 #mobile-side-nav ul {
  list-style: none;
@@ -45,9 +49,13 @@
 }
 #mobile-side-nav ul li a i {
     position: absolute;
-    right: 10px;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
 }
 #mobile-side-nav ul ul {
  background-color: rgb(0 0 0 / 9%);;
